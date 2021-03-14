@@ -1,0 +1,128 @@
+\documentclass[
+    12pt, % Font size
+    openright,
+    twoside, % Use both sides of the paper
+    a4paper, % Paper size
+    article,
+    english,brazil % languages: the last one is the default of the text
+]{abntex2}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm
+ }
+
+% Define font 
+\usepackage{fourier}
+\usepackage{amsmath}
+
+% accentuation support according to the compiler used
+\usepackage{ifxetex}
+\ifxetex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+\fi
+% end of accentuation configuration
+
+\usepackage{indentfirst}
+\usepackage{color}
+\setlength{\parskip}{1em}
+
+\author{Antonio Carlos Soares Cardoso}
+\title{Cálculo Diferencial e Integral}
+\local{Brasília, DF}
+\data{Março - 2021}
+
+%Formating section
+\usepackage{titlesec}
+\titleformat{\section}[hang]
+{\normalfont\bfseries\filright}
+{\Large\thesection.}{1ex}{\Large}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
+%Formating subsection
+\titleformat{\subsection}[hang]
+{\normalfont\bfseries\filright}
+{\thesubsection}{1ex}{}
+
+%Formating Table of Contents
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+
+\begin{capa}
+    \center
+    \ABNTEXchapterfont\Large Cálculo\\
+    \vspace*{1cm}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vfill
+    \begin{center}
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \end{center}
+    \vfill
+    \large\imprimirlocal \\
+    \large\imprimirdata
+    \vspace*{1cm}
+\end{capa}
+
+\tableofcontents
+
+\newpage
+
+\textual
+
+\section{Propriedades Básicas dos Números}
+
+Cálculo, Álgebra e Aritmética são ramos da Matemática que definem operações realizadas com números. Desta forma, é necessáro definir-se propriedades básicas dos números, sobre as quais as demais construções do conhecimento numérico são erigidas. 
+
+Neste capítulo serão apresentadas as 12 propriedades básicas dos números.
+
+\subsection{Propriedade 1 - Lei Associativa da Adição.}
+Se $a,b$ e $c$ são números quaisquer, então: 
+$$ a+(b+c)=(a+b)+c $$
+
+Esta afirmativa parece óbvia, mas ela é necessária para a prova de outras propriedades matemáticas não tão óbvias. O cerne desta sentença é que, para quaisquer números, a ordem dos parênteses é irrelevante na adição. 
+
+\subsection{Propriedade 2 - Identidade na Adição}
+
+Se $a$ é um número qualquer, então: 
+
+$$a+0=0+a=a$$
+
+Esta sentença afirma que o número $0$ não altera o resultado nas operações de adição.
+
+\subsection{Propriedade 3 - Adição de Inversos}
+
+Para qualquer número $a$, existe um número $-a$ tal que: 
+
+$$a+(-a)=(-a)+a=0$$
+
+As três propriedades até aqui listadas nos permite, de maneira formal, fazer o cálculo de equações com incógnitas e que envolvam apenas adição. 
+
+Exemplo: Seja $a$ um número qualquer, calcule o valor de $x$ para $x+a=a$. 
+
+$$x+a=a$$
+$$x+a+(-a)=a+(-a)$$
+$$x+0=0$$
+$$x=0$$
+
+\subsection{Propriedade 4 - Comutatividade na Adição}
+
+Se $a$ e $b$ são números quaisquer, então: 
+
+$$a+b=b+a$$
+
+\end{document}
