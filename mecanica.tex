@@ -1,0 +1,129 @@
+\documentclass[
+    12pt, % Font size
+    openright,
+    twoside, % Use both sides of the paper
+    a4paper, % Paper size
+    article,
+    english,brazil % languages: the last one is the default of the text
+]{abntex2}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm
+ }
+
+% Define font 
+\usepackage{fourier}
+\usepackage{amsmath}
+
+% accentuation support according to the compiler used
+\usepackage{ifxetex}
+\ifxetex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+\fi
+% end of accentuation configuration
+
+\usepackage{indentfirst}
+\usepackage{color}
+\setlength{\parskip}{0.5em}
+
+\author{Antonio Carlos Soares Cardoso}
+\title{Cálculo Diferencial e Integral}
+\local{Brasília, DF}
+\data{Março - 2021}
+
+%Formating section
+\usepackage{titlesec}
+\titleformat{\section}[hang]
+{\normalfont\bfseries\filright}
+{\Large\thesection.}{1ex}{\Large}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
+%Formating subsection
+\titleformat{\subsection}[hang]
+{\normalfont\bfseries\filright}
+{\thesubsection}{1ex}{}
+
+%Formating Table of Contents
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+
+\textual
+
+\section{Mecânica Clássica}
+
+A Mecânica Clássica corresponde à área da Física que estuda o movimento dos corpos macroscópicos. Para fins didáticos pode ser subdividida em:
+
+\item \textbf{Cinemática} - Estuda o Movimento dos corpos em si, sem deter-se na análise de suas causas.
+\item \textbf{Dinâmica} - Analisa as causas que podem provocar movimento nos corpos.
+\item \textbf{Estática} - Analisa os corpos sem movimento aparente.
+
+\section{Cinemática}
+
+Na cinemática busca-se conhecer o comportamento da posição $(s)$ de um corpo em movimento em função do tempo. Ao analisar a posição do corpo em função do tempo teremos uma curva, cuja taxa de variação ou derivada corresponderá à velocidade $(v)$ deste corpo. Assim:
+
+\textbf{Velocidade} - Corresponde à variação do espaço percorrido por um corpo em função do tempo, ou seja:
+
+$$ v = \frac{ds}{dt} $$
+
+Quando a velocidade do corpo em análise também varia com o tempo, esta variação corresponderá à aceleração.
+
+\textbf{Aceleração} - Corresponde à taxa de variação temporal da velocidade de um corpo, ou seja:
+
+$$ a = \frac{dv}{dt} = \frac{d^2s}{dt^2}$$
+
+\subsection{Aceleração constante}
+
+Em conformidade com a definição de aceleração e para o caso específico desta ser uma constante $(a)$, obtém-se as seguintes equações descritivas do movimento:
+
+$$ a = cte. $$
+$$ \int \frac{dv}{dt} dt = \int a dt$$
+$$ v(t) = v_0 + at $$
+
+Então:
+
+$$ \int \frac{ds}{dt} dt = \int v dt = \int (v_0 + at) dt $$
+$$ s(t) = s_0 + v_0 t + \frac{a t^2}{2} $$
+
+Expressando-se $t$ em função de $v$ e substituindo em $s(t)$:
+
+$$t = \frac{(v - v_0)}{a}$$
+$$s = s_0 + \frac{(v - v_0)}{a}(v_0 + \frac{a}{2}\frac{(v - v_0)}{a})$$
+
+Após algumas manipulações algébricas obtém-se a equação de Torricelli. 
+
+$$v^2 = v_0^2 + 2a(s-s_0)$$
+
+Resumidamente, as equações para análise do movimento quando a aceleração é constante (inclusive para o caso desta ser zero) são:
+
+\begin{equation}
+v(t) = v_0 + at
+\end{equation}
+\begin{equation}
+s(t) = s_0 + v_0t + \frac{at^2}{2}    
+\end{equation}
+\begin{equation}
+v^2 = v_0^2 + 2a(s - s_0)
+\end{equation}
+
+
+\end{document}
