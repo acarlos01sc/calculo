@@ -221,5 +221,62 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
 
 \textbf{Um projétil é lançado obliquamente com velocidade $V$, formando um ângulo $\theta$ com a superfície horizontal. Obtenha as expressões para a altura máxima, alcance (máxima distância horizontal) e o ângulo $\theta$ que maximiza este alcance. Considere $g$ como a aceleração da gravidade.}
 
+\textcolor{red}{O movimento pode ser decomposto em componentes vetoriais horizontal e vertical $V_x$ e $V_y$ respectivamente. No movimento horizontal não há aceleração, enquanto que no vertical atua a gravidade $g$. Desta forma, as expressões para as velocidades e as equações horárias (posição em função do tempo) são:}
+
+\textcolor{red}{
+    $$V_x = V cos(\theta)$$
+    $$Vo_y = V sin(\theta)$$
+}
+
+\textcolor{red}{$Vo_y$ corresponde ao valor inicial da velocidade vertical.}
+
+\textcolor{red}{
+    $$S_x(t) = V cos(\theta) \cdot t$$
+    $$S_y(t) = V sin(\theta) \cdot t - \frac{gt^2}{2}$$
+}
+
+\textcolor{blue}{\textbf{Cálculo da Altura Máxima:}}
+
+\textcolor{red}{A Altura Máxima ($H$) ocorrerá no instante em que a derivada temporal de $S_y(t)$ for nula.}
+
+\textcolor{red}{
+    $$\frac{dS_y}{dt} = V sin(\theta) - gt = 0$$
+    $$t = \frac{V sin(\theta)}{g}$$
+}
+
+\textcolor{red}{
+    $$H = V sin(\theta) \cdot \frac{V sin(\theta)}{g} - \frac{g (\frac{V sin(\theta)}{g})^2}{2}$$
+    $$H = \frac{V^2 sin^2(\theta)}{2g}$$
+}
+
+\textcolor{blue}{\textbf{Cálculo do Alcance ($A$):}}
+
+\textcolor{red}{Para obter-se o alcance ($A$) é necessário identificar o tempo total de queda do projétil.}
+
+\textcolor{red}{
+    $$S_y(t) = V sin(\theta) \cdot t - \frac{gt^2}{2} = 0$$
+    $$V sin(\theta) - \frac{gt}{2} = 0$$
+    $$t = \frac{2V sin(\theta)}{g}$$
+}
+
+\textcolor{red}{A posição horizontal para o tempo encontrado será o alcance.}
+
+\textcolor{red}{
+    $$S_x(t) = V cos(\theta) \cdot t$$
+    $$A = V cos(\theta) \cdot \frac{2V sin(\theta)}{g}$$
+    $$A = \frac{2V^2 cos(\theta)sin(\theta)}{g}$$
+}
+
+\textcolor{red}{De acordo com a expressão, $A$ é função do ângulo $\theta$, portanto, o alcance máximo será quando a derivada deste em relação a $\theta$ for nula.}
+
+\textcolor{red}{
+    $$\frac{dA}{d\theta} = \frac{2V^2}{g}(-sin^2(\theta) + cos^2(\theta))$$
+    $$\frac{2V^2}{g}(-sin^2(\theta) + cos^2(\theta)) = 0$$
+    $$cos(\theta) = sin(\theta) \implies \theta = 45^\circ$$
+}
+
+\subsection{Dinâmica}
+
+A Dinâmica analisa as causas do movimento. Para isto é necessário conhecer as Leis de Newton.
 
 \end{document}
