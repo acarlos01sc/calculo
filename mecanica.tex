@@ -275,6 +275,41 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
     $$cos(\theta) = sin(\theta) \implies \theta = 45^\circ$$
 }
 
+\subsection{Movimento Circular}
+
+Para a análise do movimento circular é necessário observar-se que, mesmo que o módulo da velocidade do corpo seja constante, sua direção varia continuamente. Nestas circuntâncias, uma aceleração deve existir de forma a alterar o vetor velocidade deste corpo em trajetória curvelínea. 
+
+Considere-se a seguinte notação:
+
+\begin{itemize}
+    \item $v$ - Velocidade Linear do corpo. 
+    \item $\omega$ - Velocidade Angular. 
+    \item $r$ - Raio da curva descrita pelo corpo em movimento. 
+    \item $\theta$ - Ângulo descrito no sistema de referência.
+\end{itemize}
+
+Tem-se que:
+
+$$ v = \frac{dx}{dt} = \frac{rd\theta}{dt} = r\omega$$
+
+Expressando-se a posição do corpo em termos vetoriais e utilizando a notação de versores:
+
+\includegraphics[width=\linewidth,height=6cm,keepaspectratio,]{./fig/Circulo.png}
+
+$$\vec S(t) = r(cos(\theta)\hat \imath + sin(\theta)\hat \jmath)$$
+$$\frac{d\vec S(t)}{dt} = \vec v(t)$$
+$$\vec v(t) = r(-sin(\theta)\frac{d\theta}{dt}\hat \imath + cos(\theta)\frac{d\theta}{dt}\hat \jmath)$$
+$$\vec v(t) = -r\omega(sin(\theta)\hat \imath - cos(\theta)\hat \jmath)$$
+
+$$\frac{d\vec v(t)}{dt} = \vec a_c(t)$$
+$$\vec a_c(t) = -r\omega(cos(\theta)\omega\hat \imath + sin(\theta)\omega\hat \jmath)$$
+$$\vec a_c(t) = -r\omega^2(cos(\theta)\hat \imath + sin(\theta)\hat \jmath) = \omega^2\vec S(t)$$
+
+Logo:
+
+$$|a_c| = \omega^2r$$
+$$|a_c| = \frac{v^2}{r}$$
+
 \subsection{Dinâmica}
 
 A Dinâmica analisa as causas do movimento. Para isto é necessário definir alguns conceitos.
@@ -282,5 +317,34 @@ A Dinâmica analisa as causas do movimento. Para isto é necessário definir alg
 \textbf{Massa - } Corresponde à quantidade de matéria contida em um corpo. No Sistema Internacional sua unidade é o Kilograma ($kg$).
 
 \textbf{Quantidade de Movimento ($p$) - } Um corpo em movimento é dotado deste atributo que corresponde ao produto de sua velocidade por sua massa ($p = mv$). Ressalte-se que $p$ é uma grandeza vetorial.
+
+\subsection{Leis de Newton}
+
+\textbf{Primeira Lei de Newton - } Também conhecida como Lei da Inércia, seu enunciado diz que: Todo corpo tende a permanecer em repouso ou em movimento retilíneo uniforme, a menos que sejam aplicadas forças sobre ele.
+
+\textbf{Segunda Lei de Newton - } A mudança na quantidade de movimento de um corpo é proporcional à força aplicada, que atua na direção da linha reta deste movimento.
+
+Da Segunda Lei resulta a seguinte equação, conhecida como Princípio Fundamental da Dinâmica:
+
+\begin{equation}
+    \color{blue}
+    F = \frac{dp}{dt}
+\end{equation}
+
+Como $p = mv$ e desenvolvendo-se a derivada:
+
+\begin{equation}
+    \color{blue}
+    F = \frac{mdv}{dt} + \frac{vdm}{dt}
+\end{equation}
+
+Para sistemas que não tenham variação de massa, a equação pode ser simplificada para:
+
+\begin{equation}
+    \color{blue}
+    F = ma
+\end{equation}
+
+\textbf{Terceira Lei de Newton - } Para toda força de ação que é aplicada a um corpo, surge uma força de reação em um corpo diferente. Essa força de reação tem a mesma intensidade da força de ação e atua na mesma direção, mas com sentido oposto.
 
 \end{document}
