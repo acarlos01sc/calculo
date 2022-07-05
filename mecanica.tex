@@ -53,6 +53,9 @@
 [\vspace{1ex}%
 {\titlerule[2pt]}]
 
+%Plots
+\usepackage{pgfplots}
+
 %Formating subsection
 \titleformat{\subsection}[hang]
 {\normalfont\bfseries\filright}
@@ -203,7 +206,15 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
     $$v(t) = \frac{t^2}{20} $$
 }
 
-\includegraphics[width=\linewidth,height=6cm,keepaspectratio,]{./fig/exerc01-01.png}
+\begin{tikzpicture} 
+    \begin{axis}
+        []
+        \addplot [blue,
+                  domain=0:30,
+                  samples=201,]
+                  {x^2/20};
+    \end{axis}
+\end{tikzpicture}
 
 \textcolor{red}{A partir da equação da velocidade é possível obter-se a expressão para a posição do foguete em função do tempo}
 
@@ -217,7 +228,15 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
     $$S(t) = \frac{t^3}{60} $$
 }
 
-\includegraphics[width=\linewidth,height=6cm,keepaspectratio,]{./fig/exerc01-02.png}
+\begin{tikzpicture} 
+    \begin{axis}
+        []
+        \addplot [blue,
+                  domain=0:30,
+                  samples=201,]
+                  {x^3/60};
+    \end{axis}
+\end{tikzpicture}
 
 \textbf{Um projétil é lançado obliquamente com velocidade $V$, formando um ângulo $\theta$ com a superfície horizontal. Obtenha as expressões para a altura máxima, alcance (máxima distância horizontal) e o ângulo $\theta$ que maximiza este alcance. Considere $g$ como a aceleração da gravidade.}
 
