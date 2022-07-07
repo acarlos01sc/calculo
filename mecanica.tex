@@ -208,7 +208,9 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
 
 \begin{tikzpicture} 
     \begin{axis}
-        []
+        [grid=major,
+         ymin=0, ymax=50,
+         xmin=0, xmax=30,]
         \addplot [blue,
                   domain=0:30,
                   samples=201,]
@@ -230,7 +232,9 @@ No Sistema Internacional de Unidades (SI) as unidades de tempo e distância são
 
 \begin{tikzpicture} 
     \begin{axis}
-        []
+        [grid=major,
+         ymin=0, ymax=500,
+         xmin=0, xmax=30,]
         \addplot [blue,
                   domain=0:30,
                   samples=201,]
