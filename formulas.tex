@@ -1,0 +1,106 @@
+\documentclass[
+    12pt, % Font size
+    openright,
+    twoside, % Use both sides of the paper
+    a4paper, % Paper size
+    article,
+    english,brazil % languages: the last one is the default of the text
+]{abntex2}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm
+ }
+
+% Define font 
+\usepackage{fourier}
+\usepackage{amsmath}
+
+% Table type
+\usepackage{tabularx}
+
+% Graphics
+\usepackage{graphicx}
+
+% accentuation support according to the compiler used
+\usepackage{ifxetex}
+\ifxetex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+\fi
+% end of accentuation configuration
+
+\usepackage{indentfirst}
+\usepackage{color}
+\setlength{\parskip}{0.5em}
+
+\author{Antonio Carlos Soares Cardoso}
+\title{Física - Mecânica Clássica}
+\local{Brasília, DF}
+\data{Maio - 2022}
+
+%Formating section
+\usepackage{titlesec}
+\titleformat{\section}[hang]
+{\normalfont\bfseries\filright}
+{\Large\thesection.}{1ex}{\Large}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
+%Plots
+\usepackage{pgfplots}
+
+%Formating subsection
+\titleformat{\subsection}[hang]
+{\normalfont\bfseries\filright}
+{\thesubsection}{1ex}{}
+
+%Formating Table of Contents
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+
+\textual
+
+\section{Cinemática}
+
+Quando a aceleração $a$ for constante: 
+
+$$V = V_o + at$$ 
+$$S = S_o + V_ot + \frac{at^2}{2}$$
+$$V^2 = V_o^2 + 2a\Delta S$$
+
+\section{Dinâmica}
+
+$$F = ma$$
+$$\tau = Fdcos\theta = \Delta E$$
+$$I = F\Delta t$$
+
+\subsection{Tipos de Força} 
+
+$$P = mg$$
+$$F_{el} = Kx$$
+$$F_{at} = \mu N$$
+
+\subsection{Movimento circular}
+
+$$a_c = \frac{v^2}{r}$$
+$$F_c = \frac{mv^2}{r}$$
+
+\end{document}
